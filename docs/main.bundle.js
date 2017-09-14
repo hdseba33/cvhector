@@ -170,7 +170,6 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_historial_trabajos_component__ = __webpack_require__("../../../../../src/app/components/historial/trabajos.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_historial_formacion_academica_component__ = __webpack_require__("../../../../../src/app/components/historial/formacion-academica.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_historial_otros_component__ = __webpack_require__("../../../../../src/app/components/historial/otros.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_pasatiempo_pasatiempo_component__ = __webpack_require__("../../../../../src/app/components/pasatiempo/pasatiempo.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return APP_ROUTING; });
 
 
@@ -178,7 +177,7 @@ AppModule = __decorate([
 
 
 
-
+// import {PasatiempoComponent} from './components/pasatiempo/pasatiempo.component';
 // import {LoginComponent} from './components/login/login.component';
 var APP_ROUTES = [
     { path: 'inicio', component: __WEBPACK_IMPORTED_MODULE_1__components_home_home_component__["a" /* HomeComponent */] },
@@ -192,7 +191,7 @@ var APP_ROUTES = [
     // { path: 'historial/trabajos', component: TrabajosComponent },
     // { path: 'historial/formacion', component: FormacionAcademicaComponent },
     // { path: 'historial/otros', component: OtrosComponent },
-    { path: 'pasatiempo', component: __WEBPACK_IMPORTED_MODULE_6__components_pasatiempo_pasatiempo_component__["a" /* PasatiempoComponent */] },
+    // { path: 'pasatiempo', component: PasatiempoComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 ];
 var APP_ROUTING = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forRoot(APP_ROUTES);
@@ -524,7 +523,7 @@ var _a;
 /***/ "../../../../../src/app/components/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<br>\n  <div class=\"row text-center\">\n    <div class=\"col-md-12\">\n      <span>\n        <i class=\"fa fa-user-circle fa-2x\"></i>\n      </span>\n      <input type=\"text\" name=\"user\" [(ngModel)]=\"user\" value=\"\" placeholder=\"user\">\n    </div>\n  </div>\n  <div class=\"row text-center\">\n    <div class=\"col-md-12\">\n      <span>\n        <i class=\"fa fa-key fa-2x\"></i>\n      </span>\n      <input type=\"password\" name=\"password\" [(ngModel)]=\"password\" value=\"\" placeholder=\"password\">\n    </div>\n  </div>\n  <br>\n  <button  (click)=\"login($event)\" type=\"submit\" class=\"btn btn-outline-primary btn-block\">\n    <i class=\"fa fa-refresh fa-spin fa-1x fa-fw\" *ngIf=\"cargando\"></i>LogIn\n  </button>\n  <div class=\"alert alert-danger\" role=\"alert\" *ngIf=\"!cargando && cargando!=null\">\n    <strong>Please re-enter your password and user</strong>\n  </div> \n"
+module.exports = "<br>\n  <div class=\"row text-center\">\n    <div class=\"col-md-12\">\n      <span>\n        <i class=\"fa fa-user-circle fa-2x\"></i>\n      </span>\n      <input type=\"text\" name=\"user\" [(ngModel)]=\"user\" value=\"\" placeholder=\"user\">\n    </div>\n  </div>\n  <div class=\"row text-center\">\n    <div class=\"col-md-12\">\n      <span>\n        <i class=\"fa fa-key fa-2x\"></i>\n      </span>\n      <input type=\"password\" name=\"password\" [(ngModel)]=\"password\" value=\"\" placeholder=\"password\" (keyup.enter)=\"login($event)\">\n    </div>\n  </div>\n  <br>\n  <button  (click)=\"login($event)\" type=\"submit\" class=\"btn btn-outline-primary btn-block\">\n    <i class=\"fa fa-refresh fa-spin fa-1x fa-fw\" *ngIf=\"cargando\"></i>LogIn\n  </button>\n  <div class=\"alert alert-danger\" role=\"alert\" *ngIf=\"!cargando && cargando!=null\">\n    <strong>Please re-enter your password and user</strong>\n  </div>\n"
 
 /***/ }),
 
@@ -589,7 +588,7 @@ LoginComponent = __decorate([
 /***/ "../../../../../src/app/components/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-toggleable-md navbar-inverse bg-primary bg-faded\">\n  <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <a class=\"navbar-brand\" routerLink=\"inicio\">Curriculum Vitae</a>\n  <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n    <ul class=\"navbar-nav\">\n      <div *ngFor=\"let menu of menus[indicesel]; let indice=index\">\n        <li class=\"nav-item\" routerLinkActive=\"active\" *ngIf=\"menu!=menus[indicesel][3]\">\n          <a class=\"nav-link\" routerLink=\"{{menus[0][indice]|lowercase}}\">\n            <div class=\"btn-menu\"><strong>{{menu}}</strong></div>\n          </a>\n        </li>\n      </div>\n      <li class=\"nav-item\">\n          <div class=\"dropdown\">\n              <button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                {{nombrecombo}}\n              </button>\n              <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n                <div *ngFor=\"let idioma of idiomas; let i=index\">\n                  <button class=\"dropdown-item\" type=\"button\" (click)=\"selIdioma(idioma)\">{{nombreidiomas[indicesel][i]}}</button>\n                </div>\n              </div>\n          </div>\n      </li>\n      <li class=\"nav-item\" routerLinkActive=\"active\">\n        <a class=\"nav-link\" routerLink=\"salir\" (click)=\"salir()\">\n          <div class=\"btn-menu\"><strong>logout</strong></div>\n        </a>\n      </li>\n    </ul>\n  </div>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-toggleable-md navbar-inverse bg-primary bg-faded\">\n  <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <a class=\"navbar-brand\" routerLink=\"inicio\">Curriculum Vitae</a>\n  <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n    <ul class=\"navbar-nav\">\n      <div *ngFor=\"let menu of menus[indicesel]; let indice=index\">\n        <li class=\"nav-item\" routerLinkActive=\"active\" *ngIf=\"menu!=menus[indicesel][2]\">\n          <a class=\"nav-link\" routerLink=\"{{menus[0][indice]|lowercase}}\">\n            <div class=\"btn-menu\"><strong>{{menu}}</strong></div>\n          </a>\n        </li>\n      </div>\n      <li class=\"nav-item\">\n          <div class=\"dropdown\">\n              <button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                {{nombrecombo}}\n              </button>\n              <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n                <div *ngFor=\"let idioma of idiomas; let i=index\">\n                  <button class=\"dropdown-item\" type=\"button\" (click)=\"selIdioma(idioma)\">{{nombreidiomas[indicesel][i]}}</button>\n                </div>\n              </div>\n          </div>\n      </li>\n      <li class=\"nav-item\" routerLinkActive=\"active\">\n        <a class=\"nav-link\" routerLink=\"salir\" (click)=\"salir()\">\n          <div class=\"btn-menu\"><strong>logout</strong></div>\n        </a>\n      </li>\n    </ul>\n  </div>\n</nav>\n"
 
 /***/ }),
 
@@ -626,12 +625,12 @@ var NavbarComponent = (function () {
         });
         ds.obtenerMenu().subscribe(function (menu) {
             _this.menus = menu.json().menu;
-            _this.nombrecombo = _this.menus[0][3];
+            _this.nombrecombo = _this.menus[0][2];
         });
     }
     NavbarComponent.prototype.selIdioma = function (idiomasel) {
         this.indicesel = this.ds.encontrarIdioma(this.idiomas, idiomasel);
-        this.nombrecombo = this.menus[this.indicesel][3];
+        this.nombrecombo = this.menus[this.indicesel][2];
         this.ds.indiceIdioma(this.indicesel);
     };
     NavbarComponent.prototype.salir = function () {
