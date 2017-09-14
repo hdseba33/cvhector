@@ -1,5 +1,15 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
-
+# otros
+/e2e
+/src
+.anuglar-cli.json
+.editorconfig
+karma.conf.js
+package-lock-json
+package-json
+portractor.conf.js
+README.md
+tsconfig.json
 # compiled output
 /dist
 /tmp

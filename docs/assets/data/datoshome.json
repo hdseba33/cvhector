@@ -1,0 +1,6 @@
+{
+  "datoshome":[
+    ["Apellido y Nombre","Dni","Fecha de Nacimiento","Edad","Estado Civil","Domicilio","Tel/Cel","Correo"],
+    ["Surname","Dni","Date Birthday","Year old","Estado Civil","Address","Phone/Cel","Email"]
+  ]
+}
