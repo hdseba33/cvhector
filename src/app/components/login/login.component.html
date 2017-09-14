@@ -1,0 +1,24 @@
+<br>
+  <div class="row text-center">
+    <div class="col-md-12">
+      <span>
+        <i class="fa fa-user-circle fa-2x"></i>
+      </span>
+      <input type="text" name="user" [(ngModel)]="user" value="" placeholder="user">
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-md-12">
+      <span>
+        <i class="fa fa-key fa-2x"></i>
+      </span>
+      <input type="password" name="password" [(ngModel)]="password" value="" placeholder="password">
+    </div>
+  </div>
+  <br>
+  <button  (click)="login($event)" type="submit" class="btn btn-outline-primary btn-block">
+    <i class="fa fa-refresh fa-spin fa-1x fa-fw" *ngIf="cargando"></i>LogIn
+  </button>
+  <div class="alert alert-danger" role="alert" *ngIf="!cargando && cargando!=null">
+    <strong>Please re-enter your password and user</strong>
+  </div> 
