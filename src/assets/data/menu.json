@@ -1,6 +1,6 @@
 {
   "menu":[
-    ["Inicio","Historial","Pasatiempo","Idioma"],
-    ["Home","History","PasatiempoIngles","Languajes"]
+    ["Inicio","Historial","Idioma"],
+    ["Home","History","Languajes"]
   ]
 }

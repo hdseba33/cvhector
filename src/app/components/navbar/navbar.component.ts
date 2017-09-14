@@ -19,13 +19,13 @@ export class NavbarComponent {
     });
     ds.obtenerMenu().subscribe(menu=>{
       this.menus=menu.json().menu;
-      this.nombrecombo=this.menus[0][3];
+      this.nombrecombo=this.menus[0][2];
     });
   }
 
   selIdioma(idiomasel:string){
      this.indicesel=this.ds.encontrarIdioma(this.idiomas,idiomasel);
-     this.nombrecombo=this.menus[this.indicesel][3];
+     this.nombrecombo=this.menus[this.indicesel][2];
      this.ds.indiceIdioma(this.indicesel);
   }
   salir(){
