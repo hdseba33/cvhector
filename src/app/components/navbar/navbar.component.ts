@@ -18,8 +18,9 @@ export class NavbarComponent {
       this.nombreidiomas=idioma.json().idiomasnombre;
     });
     ds.obtenerMenu().subscribe(menu=>{
+      this.indicesel=ds.indiceaux;
       this.menus=menu.json().menu;
-      this.nombrecombo=this.menus[0][2];
+      this.nombrecombo=this.menus[this.indicesel][2];
     });
   }
 

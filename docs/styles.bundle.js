@@ -161,7 +161,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\nimg{\n  height: 50%;\n  width: 10%;\n}\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\nimg{\n  height: 10%;\n  width: 10%;\n}\n", ""]);
 
 // exports
 

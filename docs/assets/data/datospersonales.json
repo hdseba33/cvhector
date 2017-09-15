@@ -1,6 +1,7 @@
 {
+  "fotocarnet":["assets/img/fotocarnet.jpeg"],
   "datospersonales":[
-    ["Salinas Ugalde Héctor Danilo Sebastián","33.967.518","23/07/1988","0","soltero","Av el Progreso M1 C39, Ciudad","4839035/+5492616812221","hdseba_uch@hotmail.com / hdseba.uch@gmail.com"],
-    ["Salinas Ugalde Héctor Danilo Sebastián","33.967.518","23/07/1988","0","bachelor","Av el Progreso M1 C39, City","4839035/+5492616812221","hdseba_uch@hotmail.com / hdseba.uch@gmail.com"]
+    ["Salinas Ugalde, Héctor Danilo Sebastián","33.967.518","23/07/1988","0","Argentina","Av el Progreso M1 C39, Mendoza - Ciudad","4839035/+5492616812221","hdseba_uch@hotmail.com / hdseba.uch@gmail.com"],
+    ["Salinas Ugalde, Héctor Danilo Sebastián","33.967.518","23/07/1988","0","Argentinean","progress avenue M1 C39, Mendoza - City","4839035/+5492616812221","hdseba_uch@hotmail.com / hdseba.uch@gmail.com"]
   ]
 }

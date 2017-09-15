@@ -1,7 +1,7 @@
 {
   "submenu":[
-    ["Perfil Profesional","Formación Academica","Proyectos"],
-    ["Perfil Professional","Formation Academy","Proyects"]
+    ["Perfil Profesional","Formación Academica","Información Adicional"],
+    ["Work Experience","Education and Training","Additional Information"]
   ],
   "perfilprofesional":[
     [
@@ -14,18 +14,18 @@
       ["Sistemas y Servicios - WEB, C#","07/05/15","15/04/17"]
     ],
     [
-      ["Perfil Professional","date Init","date finish"],
-      ["(Ingles)Freelance - JAVA","01/02/12","31/04/12"],
+      ["Work Experience","Dates (from)","Dates (to)"],
+      ["Freelance - JAVA","01/02/12","31/04/12"],
       ["Freelance - PHP","01/04/13","31/07/13"],
       ["Sfidasoft - JAVA","01/08/13","31/08/13"],
-      ["Freelance - Desarrollador WEB (Amaya Construcciones)","11/10/13","---"],
-      ["Freelance - Desarrollador WEB (IPC)","09/06/14","---"],
+      ["Freelance - WEB Developer (Amaya Construcciones)","11/10/13","---"],
+      ["Freelance - WEB Developer (IPC)","09/06/14","---"],
       ["Sistemas y Servicios - WEB, C#","07/05/15","15/04/17"]
     ]
   ],
   "formacionacademica":[
     [
-      ["Formación Academica","Lugar","Fecha Finalización"],
+      ["Formación Academica","Lugar","Fecha de Finalización"],
       ["Programador Universitario","Universidad Champagnat","31/04/12"],
       ["Analista Universitario en Sistemas","Universidad Champagnat","31/07/13"],
       ["Licenciatura en Sistemas de Información","Universidad Champagnat","(Falta una materia y la tesis)"],
@@ -38,17 +38,17 @@
       ["Ionic v2 - v3","UDEMY","(actualmente)"]
     ],
     [
-      ["Formación Academica","Lugar","Fecha Finalización"],
-      ["(Ingles)Programador Universitario","Universidad Champagnat","31/04/12"],
-      ["Analista Universitario en Sistemas","Universidad Champagnat","31/07/13"],
-      ["Licenciatura en Sistemas de Información","Universidad Champagnat","(Falta una materia y la tesis)"],
-      ["Desarrollador JAVA","Mariano Mammondi","---"],
-      ["Electronica Modular","Mariano Mammondi","---"],
+      ["Education and Training","Location","Finish date"],
+      ["University Programmer","Champagnat University","31/04/12"],
+      ["University Analyst in Systems","Champagnat University","31/07/13"],
+      ["Bachelor of Information Systems","Champagnat University","(actually)"],
+      ["JAVA Developer","Mariano Mammondi","---"],
+      ["Modular Electronics","Mariano Mammondi","---"],
       ["Full Stack MEAN","UDEMY","19/07/17"],
       ["Angular 2","UDEMY","23/07/17"],
       ["Git/Github","UDEMY","23/08/17"],
       ["Angular 4","UDEMY","06/09/17"],
-      ["Ionic v2 - v3","UDEMY","(actualmente)"]
+      ["Ionic v2 - v3","UDEMY","(actually)"]
     ]
   ],
   "otros":[
@@ -63,14 +63,14 @@
       ["Conferencia de IPv6"]
     ],
     [
-      ["Proyects/Conferens/Seminarys"],
-      ["(Ingles)Taller de Juegos - Universidad de Mendoza"],
-      ["Seminario Producción de Videojuegos con aspiraciones globales - Jason Della Rocca"],
-      ["Conferencia de Encuentro Mendocino de Videojuegos (EMV)"],
+      ["Projects/Conferences/Seminars"],
+      ["Game Workshop - Mendoza University"],
+      ["Seminar Production of Video Games with global aspirations - Jason Della Rocca"],
+      ["Meeting Conference of Video Games (EMV)"],
       ["Hackatrix 2013"],
-      ["Conferencia Management de Proyectos de Software Agiles"],
-      ["Seminario Gestion de Procesos"],
-      ["Conferencia de IPv6"]
+      ["Agile Software Project Management Conference"],
+      ["Process Management Seminar"],
+      ["IPv6 Conference"]
     ]
   ]
 }

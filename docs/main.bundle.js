@@ -457,7 +457,7 @@ var _a;
 /***/ "../../../../../src/app/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"ds.datospersonales; else cargando\">\n  <div class=\"card\" *ngIf=\"datospersonales.length>0\">\n    <img class=\"card-img-top\" src=\"assets/img/fotocarnet.jpg\" alt=\"imagen\">\n    <ul class=\"list-group list-group-flush\">\n      <li class=\"list-group-item\" *ngFor=\"let dato of datoshome[indiceidioma];let indice=index\">\n        <div >\n          <p><strong>{{dato}}: </strong> {{datospersonales[indiceidioma][indice]}}</p>\n        </div>\n      </li>\n    </ul>\n  </div>\n</div>\n<ng-template #cargando>\n  <div class=\"text-center\">\n    <i class=\"fa fa-cog fa-spin fa-3x fa-fw\"></i>\n    <span class=\"sr-only\">Loading...</span>\n  </div>\n</ng-template>\n"
+module.exports = "<div *ngIf=\"ds.datospersonales; else cargando\">\n  <div class=\"card\" *ngIf=\"datospersonales.length>0\">\n    <img class=\"card-img-top img img-thumbnail\" src=\"{{this.fotocarnet[0]}}\" alt=\"imagen\">\n    <ul class=\"list-group list-group-flush\">\n      <li class=\"list-group-item\" *ngFor=\"let dato of datoshome[indiceidioma];let indice=index\">\n        <div >\n          <p><strong>{{dato}}: </strong> {{datospersonales[indiceidioma][indice]}}</p>\n        </div>\n      </li>\n    </ul>\n  </div>\n</div>\n<ng-template #cargando>\n  <div class=\"text-center\">\n    <i class=\"fa fa-cog fa-spin fa-3x fa-fw\"></i>\n    <span class=\"sr-only\">Loading...</span>\n  </div>\n</ng-template>\n"
 
 /***/ }),
 
@@ -491,10 +491,12 @@ var HomeComponent = (function () {
             _this.indiceidioma = ds.indiceaux;
         });
         ds.obtenerDatosPersonales().subscribe(function (datos) {
+            _this.indiceidioma = ds.indiceaux;
             _this.datospersonales = datos.json().datospersonales;
-            _this.date2 = new Date(_this.datospersonales[0][2].substr(6, 4));
+            _this.fotocarnet = datos.json().fotocarnet;
+            _this.date2 = new Date(_this.datospersonales[_this.indiceidioma][2].substr(6, 4));
             _this.edad = _this.date.getFullYear() - (_this.date2.getFullYear() + 1);
-            _this.datospersonales[0][3] = _this.edad;
+            _this.datospersonales[_this.indiceidioma][3] = _this.edad;
         });
     }
     HomeComponent.prototype.ngOnInit = function () {
@@ -624,8 +626,9 @@ var NavbarComponent = (function () {
             _this.nombreidiomas = idioma.json().idiomasnombre;
         });
         ds.obtenerMenu().subscribe(function (menu) {
+            _this.indicesel = ds.indiceaux;
             _this.menus = menu.json().menu;
-            _this.nombrecombo = _this.menus[0][2];
+            _this.nombrecombo = _this.menus[_this.indicesel][2];
         });
     }
     NavbarComponent.prototype.selIdioma = function (idiomasel) {

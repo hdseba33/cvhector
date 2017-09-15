@@ -1,6 +1,6 @@
 <div *ngIf="ds.datospersonales; else cargando">
   <div class="card" *ngIf="datospersonales.length>0">
-    <img class="card-img-top" src="assets/img/fotocarnet.jpg" alt="imagen">
+    <img class="card-img-top img img-thumbnail" src="{{this.fotocarnet[0]}}" alt="imagen">
     <ul class="list-group list-group-flush">
       <li class="list-group-item" *ngFor="let dato of datoshome[indiceidioma];let indice=index">
         <div >

@@ -12,17 +12,21 @@ export class HomeComponent implements OnInit {
   private datoshome:any[]=[];
   private datospersonales:any[]=[];
   private indiceidioma:any;
+  private fotocarnet:any;
   constructor(private ds:DatosService) {
     ds.obtenerDatosHome().subscribe(datos=>{
       this.datoshome=datos.json().datoshome;
       this.indiceidioma=ds.indiceaux;
     });
     ds.obtenerDatosPersonales().subscribe(datos=>{
+      this.indiceidioma=ds.indiceaux;
       this.datospersonales=datos.json().datospersonales;
-      this.date2=new Date(this.datospersonales[0][2].substr(6, 4))
+      this.fotocarnet=datos.json().fotocarnet;
+      this.date2=new Date(this.datospersonales[this.indiceidioma][2].substr(6, 4))
       this.edad=this.date.getFullYear()-(this.date2.getFullYear()+1);
-      this.datospersonales[0][3]=this.edad;
+      this.datospersonales[this.indiceidioma][3]=this.edad;
     });
+    
   }
   ngOnInit(){
     this.ds.indiceidiomaobs.subscribe(indiceactual=>{
